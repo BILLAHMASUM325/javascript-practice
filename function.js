@@ -44,3 +44,16 @@ function jog(x, y){
 }
 var a = jog(20,5);
 console.log(a)
+
+
+function myFunction(a,b){
+    return a*b;
+}
+let x = myFunction(4,3)
+console.log(x)
+
+
+function toCelsius(fahrenheit){
+    return(5/9)*(fahrenheit-32);
+}
+console.log(toCelsius(77))

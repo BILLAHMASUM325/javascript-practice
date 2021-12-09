@@ -29,3 +29,65 @@ var valueArray = ['Masum','Billah','Khulna','Bangladesh','Zhenjiang', 'Jiangsu',
 var valueSlice = valueArray.slice(2, 5);
 console.log(valueSlice);
 
+console.log(valueArray.length)
+
+var first = valueArray[3];
+console.log(first)
+
+var last = valueArray[valueArray.length - 1];
+console.log(last)
+
+let fruits = ['Apple', 'Banana']
+// loop
+fruits.forEach(function(item,index,array){
+    console.log(item,index)
+})
+
+// add, push, pop item to the end of an Array
+let newLength = fruits.push('Orange');
+console.log(fruits)
+fruits.pop();
+console.log(fruits);
+fruits.push('Candy','Ice-cream')
+console.log(fruits);
+
+// Remove an item from the beginning of an Array
+
+fruits.shift();
+console.log(fruits);
+
+// Add an item to the beginning of an Array
+fruits.unshift('Strawberry')
+console.log(fruits);
+
+// Find the index of an item in the Array
+let x =fruits.indexOf('Ice-cream')
+console.log(x);
+
+// Remove an item by index position
+let removedItem = fruits.splice(0,1)
+console.log(fruits)
+
+// Remove items from an index position
+let vegetables =['Cabbage', 'Turnip', 'Radish', 'Carrot']
+console.log(vegetables)
+
+let pos = 1;
+let n = 2;
+
+let removedItems = vegetables.splice(pos,n)
+console.log(vegetables)
+console.log(removedItems)
+vegetables.slice()
+console.log(vegetables)
+
+let arr = ['This is the first element', 'This is the second element','This is the 3rd element']
+console.log(arr[0])
+console.log(arr[1])
+console.log(arr[arr.length-1])
+
+const fruit = []
+fruit.push('banana', 'apple','peach')
+console.log(fruit)
+console.log(fruit.length)
+
