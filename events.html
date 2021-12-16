@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Management</title>
+</head>
+<body>
+    <h1 onclick="handleClick()">Exploring Event</h1>
+    <button onmousemove="handleClick()">Click Me</button>
+    <button onmouseover="jaioNa()">Jaio Na</button>
+    <button onmouseout="jaioNa()">Jaio Na</button>
+
+    <button id="first">Click Me</button>
+    <button id="second">Click Me</button>
+    <button id="third">Click Me</button>
+    <button id="forth">Click me for text</button>
+
+    <script>
+
+        document.getElementById('forth').addEventListener('click', function(){//anonyms function, mana kono name nai.
+            document.body.style.color = 'tomato';
+        })
+        function handleClick(){
+            console.log('Someone Clicked Me')
+        }
+        function jaioNa(){
+            console.log("Amak cara jaio na");
+        }
+
+        function handleCli(){
+            document.body.style.backgroundColor = "tomato";
+        }
+        function colorHandel(){
+            document.body.style.backgroundColor = "cyan";
+        }
+        function firstButtonColor(){
+            document.body.style.backgroundColor ="gray";
+        }
+
+        const secondButton = document.getElementById('second');
+        const thirdButton = document.getElementById('third');
+        const firstButton = document.getElementById("first");
+
+
+        secondButton.onclick = handleCli;
+        thirdButton.addEventListener('click', colorHandel);
+        firstButton.addEventListener('click', firstButtonColor);
+    </script>
+</body>
+</html>
