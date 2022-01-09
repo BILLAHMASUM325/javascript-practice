@@ -34,33 +34,39 @@ explain_callback('Kogir Uddin', 18, takeShower);
 explain_callback('Billah', 26, scrollFacebook);
 
 
-
-function evenify(num){
-  if(num % 2 ==0){
-    console.log(num, ': is even number');
-  }
-  else{
-    console.log(num*2, ': is odd number');
-  }
  
-}
 
-nums = [5, 3, 4, 5, 6, 7];
-for (let i = 0; i < nums.length; i++) {
-  const num = nums[i];
- evenify(num)
+function evenify_all(nums){
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
+    if(num % 2 ==0){
+      console.log(num, ': is even number');
+    }
+    else{
+      console.log(num*2, ': is odd number');
+    }
+  }
 }
+nums = [5, 3, 4, 5, 6, 7];
+evenify_all(nums)
 
 friend_age = [13, 17, 19, 20, 18];
-for (let i = 0; i < friend_age.length; i++) {
-  const age = friend_age[i];
- evenify(age);
-  
-}
+evenify_all(friend_age)
 
 my_age = [12,13,14,15,16,17];
-for (let i = 0; i < my_age.length; i++) {
-  const ag = my_age[i];
-  evenify(ag);
-  
+evenify_all(my_age);
+
+
+function getFullName(firstName, lastName){
+  // console.log(arguments);
+  let fullName = '';
+  for(let i = 0; i < arguments.length; i++){
+    const namePart = arguments[i];
+    fullName = fullName + ' ' + namePart;
+  }
+  return fullName;
 }
+
+const nameN = getFullName('Md', 'Billah', 'Mohammad', 'Masum');
+console.log(nameN);
+
